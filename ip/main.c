@@ -41,19 +41,19 @@ int main()
     int serviceType = hexInputs[1];
     // to come back here
 
-    int totalLength = 0x0;
+    int totalLength = 0x0 & 0xff;
     totalLength = totalLength | hexInputs[2];
     totalLength = totalLength << 8;
     totalLength = totalLength | hexInputs[3];
     printf("Total length is %d\n", totalLength);
 
-    int identification = 0x0;
+    int identification = 0x0 && 0xff;
     identification = identification | hexInputs[4];
     identification = identification << 8;
     identification = identification | hexInputs[5];
     printf("Identification is %d\n", identification);
 
-    int flagsAndFragmentOffset = 0x0;
+    int flagsAndFragmentOffset = 0x0 & 0xff;
     flagsAndFragmentOffset = flagsAndFragmentOffset | hexInputs[6];
     flagsAndFragmentOffset = flagsAndFragmentOffset << 8;
     flagsAndFragmentOffset = flagsAndFragmentOffset | hexInputs[7];
@@ -88,9 +88,9 @@ int main()
     printf("Time to live is %d\n", timeToLive);
 
     int protocol = hexInputs[9];
-    // what exactly is 6?
     printf("Protocol is %d. You can refer to https://en.wikipedia.org/wiki/List_of_IP_protocol_numbers for the protocol name\n", protocol);
-
+    // in this case, 6 represents TCP - in actual sense it is the protocol that forwarded this datagram
+   
     int headerCheckSum = 0x0;
     headerCheckSum = headerCheckSum | hexInputs[10];
     headerCheckSum = headerCheckSum << 8;
