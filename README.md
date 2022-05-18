@@ -4,6 +4,7 @@ The following protocols have been decoded
 
 + IP
 + TCP
++ DIAMETER
 
 To run the code, move to the folder of the protocol you want to decode and type
 ```bash
