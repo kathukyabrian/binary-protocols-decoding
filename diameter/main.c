@@ -270,7 +270,21 @@ int main()
     applicationId |= thirdByteInApplicationId;
     printf("Application id is %d\n", applicationId);
 
-    
+    int hopToHopIdentifier = 0x0 & 0xff;
+    hopToHopIdentifier |= hexInput[12] << 24;
+    hopToHopIdentifier |= hexInput[13] << 16;
+    hopToHopIdentifier |= hexInput[14] << 8;
+    hopToHopIdentifier |= hexInput[15];
+    printf("Hop to hop identifier is %d\n", hopToHopIdentifier);
+
+    int endToEndIdentifier = 0x0 & 0xff;
+    endToEndIdentifier |= hexInput[16] << 24;
+    endToEndIdentifier |= hexInput[17] << 16;
+    endToEndIdentifier |= hexInput[18] << 8;
+    endToEndIdentifier |= hexInput[19];
+    printf("End to end identifier is %d\n", endToEndIdentifier);
+
+    // the rest are AVPs
 
     return 1;
 }
