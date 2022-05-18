@@ -8,13 +8,19 @@ The following protocols have been decoded
 
 To run the code, move to the folder of the protocol you want to decode and type
 ```bash
-gcc main.c
+make all
 ```
 
-This will create an out file, which you can execute as follows
+This will create an executable file called *main*, which you can execute as follows
 
 ```bash 
-./a.out
+./main
+```
+
+To delete the executable you can type the following comamnd
+
+```bash
+make clean
 ```
 
 Feel free to contribute
