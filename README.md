@@ -6,6 +6,7 @@ The following protocols have been decoded
 + TCP
 + DIAMETER
 + SCTP
++ RADIUS
 
 To run the code, move to the folder of the protocol you want to decode and type
 ```bash
